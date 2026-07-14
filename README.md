@@ -315,7 +315,7 @@ USE pizzeria_don_piccolo;
 SELECT calcular_total_pedido(1) AS total_pedido_1;
 
 -- 2. Función: calcular_ganancia_diaria
-SELECT calcular_ganancia_diaria('2026-07-10') AS ganancia_10_julio;
+SELECT calcular_ganancia_diaria('2026-07-14') AS ganancia_14_julio;
 
 -- 3. Procedimiento: cambiar_estado
 CALL cambiar_estado(3, NOW());
@@ -375,13 +375,39 @@ SELECT * FROM stock_minimo;
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/fzh922bc/imagen-2026-07-13-195436776.png" alt="imagen 2026 07 13 195436776" border="0"></a>
 
-<!-- Agregar captura aquí: ejecución de funciones -->
+### ejecución de funciones
+> 1. Función: calcular_total_pedido
 
-<!-- Agregar captura aquí: ejecución de procedimientos -->
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/60c0kFDk/imagen-2026-07-14-070932123.png" alt="imagen 2026 07 14 070932123" border="0"></a>
 
-<!-- Agregar captura aquí: disparo de triggers -->
+> 2. Función: calcular_ganancia_diaria
 
-<!-- Agregar captura aquí: resultado de vistas -->
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/vx7hpyGh/imagen-2026-07-14-071025845.png" alt="imagen 2026 07 14 071025845" border="0"></a>
+
+### ejecución de procedimientos
+> 3. Procedimiento: cambiar_estado
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/S4mwbcZv/imagen-2026-07-14-071233808.png" alt="imagen 2026 07 14 071233808" border="0"></a>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/5gJJN0vh/imagen-2026-07-14-071259562.png" alt="imagen 2026 07 14 071259562" border="0"></a>
+
+### disparo de triggers
+
+<a href="https://ibb.co/bgJP7MN4"><img src="https://i.ibb.co/tMX43TY0/imagen-2026-07-14-071429242.png" alt="imagen-2026-07-14-071429242" border="0"></a>
+
+### resultado de vistas
+> 4. Vista: pedido_cliente
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/1fc0pbWw/Captura-de-pantalla-2026-07-14-071513.png" alt="Captura de pantalla 2026 07 14 071513" border="0"></a>
+
+> 5. Vista: desempeño_repartidor
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/HDvcsX2N/imagen-2026-07-14-071650140.png" alt="imagen 2026 07 14 071650140" border="0"></a>
+
+> 6. Vista: stock_minimo
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/RkmnwZs7/imagen-2026-07-14-071730513.png" alt="imagen 2026 07 14 071730513" border="0"></a>
+
 
 ---
 
