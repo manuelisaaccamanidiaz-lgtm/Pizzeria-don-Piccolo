@@ -109,11 +109,11 @@ Las tablas se agrupan conceptualmente en cuatro capas:
 | `cliente` | Almacena los datos de contacto de cada cliente (nombre, teléfono, dirección, correo) y su fecha de registro. |
 | `proveedor` | Catálogo de proveedores que abastecen los ingredientes. |
 | `ingrediente` | Insumos usados en las pizzas, con stock actual, stock mínimo y costo unitario. |
-| `pizza` | Catálogo de pizzas disponibles, con precio de venta y estado (activa/inactiva). |
+| `pizza` | Catálogo de pizzas disponibles, con precio de venta y estado (activa/inactiva).El proyecto maneja un único tamaño de pizza por decisión de alcance; por eso no se modeló un atributo tamaño, ya que sería constante en todas las filas y no aportaría valor analítico. |
 | `pizza_ingrediente` | Tabla puente que define la receta de cada pizza: qué ingredientes lleva y en qué cantidad. |
 | `pedido` | Cabecera de cada pedido: cliente, fecha, método de pago, estado y total. |
 | `detalle_pedido` | Líneas del pedido: qué pizzas y en qué cantidad se pidieron, con su precio unitario. |
-| `repartidor` | Datos del repartidor: nombre, teléfono, vehículo y disponibilidad. |
+| `repartidor` | Datos del repartidor: nombre, teléfono, vehículo y disponibilidad,se optó por agrupar el desempeño por rango de distancia en lugar de una zona fija, ya que refleja mejor el esfuerzo real de entrega. |
 | `domicilio` | Información logística del envío: repartidor asignado, dirección, distancia, horas de salida/llegada y estado. |
 | `historial_precio` | Registro de auditoría con el precio anterior y nuevo cada vez que cambia el precio de una pizza. |
 
