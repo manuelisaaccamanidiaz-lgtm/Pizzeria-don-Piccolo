@@ -86,11 +86,16 @@ Diseñar e implementar un sistema de base de datos relacional en MySQL que permi
 El proyecto sigue una arquitectura **100% del lado de la base de datos** (no incluye backend ni frontend). Los scripts están organizados por responsabilidad, no por entidad:
 
 ```
-database.sql    → estructura (DDL) + datos de prueba (DML)
-funciones.sql   → funciones y el procedimiento almacenado
-triggers.sql    → automatizaciones sobre INSERT/UPDATE
-vistas.sql      → reportes reutilizables
-consultas.sql   → consultas de negocio (SELECT puros)
+database.sql                     → estructura (DDL) + datos de prueba (DML)
+funciones.sql                    → funciones y el procedimiento almacenado
+triggers.sql                     → automatizaciones sobre INSERT/UPDATE
+vistas.sql                       → reportes reutilizables
+consultas.sql                    → consultas de negocio (SELECT puros)
+consultas_examen.sql             → consultas select y vista del examen
+funcionalidad_bonos.sql          → consultas select y vista del examen
+funcionalidad_descuentos.sql     → consultas select y vista del examen
+funcionalidad_disponibilidad.sql → consultas select y vista del examen
+
 ```
 
 Las tablas se agrupan conceptualmente en cuatro capas:
@@ -179,6 +184,16 @@ En términos de flujo: el cliente genera un `pedido` → el pedido se detalla en
 - **Ejemplo de uso:**
   ```sql
   SELECT calcular_ganancia_diaria('2026-07-10');
+  ```
+### `es_cliente_frecuente(p_id_cliente INT)`
+
+- **Propósito:** obtiene si un cliente ha tenido mas de 5 pedidos ese mes
+- **Parámetros:** `p_id_cliente` — id del cliente a evaluar.
+- **Retorno:** `BOOLEAN` verdadero o falso de la frecuencia.
+- **Lógica:** cuenta las veces que el cliente a parece en los pedidos registrados del mes y año actual.
+- **Ejemplo de uso:**
+  ```sql
+  SELECT es_cliente_frecuente(1);
   ```
 
 ---
